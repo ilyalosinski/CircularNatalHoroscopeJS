@@ -66,15 +66,23 @@ export namespace POINTS {
         const label_14: string;
         export { label_14 as label };
     }
-}
-export namespace ANGLES {
-    namespace ascendant {
+    namespace selena {
         const label_15: string;
         export { label_15 as label };
     }
-    namespace midheaven {
+    namespace fortune {
         const label_16: string;
         export { label_16 as label };
+    }
+}
+export namespace ANGLES {
+    namespace ascendant {
+        const label_17: string;
+        export { label_17 as label };
+    }
+    namespace midheaven {
+        const label_18: string;
+        export { label_18 as label };
     }
 }
 export const HOUSES: {
