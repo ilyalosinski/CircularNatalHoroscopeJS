@@ -88,7 +88,7 @@ export class Horoscope {
       seconds: this.origin.utcTime.second(),
       latitude: parseFloat(this.origin.latitude),
       longitude: parseFloat(this.origin.longitude),
-      calculateShadows: false,
+      calculateShadows: true,
     });
 
     this._celestialBodies = this.processCelestialBodies(this.Ephemeris.Results);
@@ -472,6 +472,8 @@ export class Horoscope {
 
     const points = keys.map((key) => {
       let eclipticDegrees;
+      let sun;
+      let moon;
       switch (key) {
         case 'northnode':
           eclipticDegrees = ephemerisResults.find((body) => body.key === 'moon')
@@ -484,6 +486,18 @@ export class Horoscope {
         case 'lilith':
           eclipticDegrees = ephemerisResults.find((body) => body.key === 'moon')
             .orbit.meanApogee.apparentLongitude;
+          break;
+        case 'selena':
+          eclipticDegrees = ephemerisResults.find((body) => body.key === 'moon')
+            .orbit.meanPerigee.apparentLongitude;
+          break;
+        case 'fortune':
+          sun = ephemerisResults.find((body) => body.key === 'sun');
+          moon = ephemerisResults.find((body) => body.key === 'moon');
+          console.log('sun', sun);
+          console.log('moon', moon);
+          console.log('ephemerisResults', ephemerisResults);
+          eclipticDegrees = null;
           break;
         default:
           eclipticDegrees = null;
