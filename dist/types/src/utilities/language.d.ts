@@ -18,6 +18,7 @@ export namespace LANGUAGE {
         northnode: string;
         southnode: string;
         lilith: string;
+        fortune: string;
         aries: string;
         taurus: string;
         gemini: string;
@@ -150,6 +151,7 @@ export namespace LANGUAGE {
         northnode: string;
         southnode: string;
         lilith: string;
+        fortune: string;
         aries: string;
         taurus: string;
         gemini: string;

@@ -23,6 +23,7 @@ export const LANGUAGE = {
     northnode: 'North Node',
     southnode: 'South Node',
     lilith: 'Lilith',
+    fortune: 'Fortune',
     // Signs
     aries: 'Aries',
     taurus: 'Taurus',
@@ -175,6 +176,7 @@ export const LANGUAGE = {
     northnode: "Північний вузол",
     southnode: "Південний вузол",
     lilith: "Ліліт",
+    fortune: "Парс фортуни",
     // Знаки
     aries: "Овен",
     taurus: "Телець",
