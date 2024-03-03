@@ -487,23 +487,20 @@ export class Horoscope {
           eclipticDegrees = ephemerisResults.find((body) => body.key === 'moon')
             .orbit.meanApogee.apparentLongitude;
           break;
-        case 'selena':
-          eclipticDegrees = ephemerisResults.find((body) => body.key === 'moon')
-            .orbit.meanPerigee.apparentLongitude;
-          break;
         case 'fortune':
           sun = ephemerisResults.find((body) => body.key === 'sun');
           moon = ephemerisResults.find((body) => body.key === 'moon');
-          console.log('sun', sun);
-          console.log('moon', moon);
-          console.log('ephemerisResults', ephemerisResults);
-          eclipticDegrees = null;
+          console.log('sun', sun.position.apparentLongitude);
+          console.log('moon', moon.position.apparentLongitude);
+          console.log('AC', this.Ascendant);
+          eclipticDegrees = sun.position.apparentLongitude + moon.position.apparentLongitude - this.Ascendant.ChartPosition.Ecliptic.DecimalDegrees;
           break;
         default:
           eclipticDegrees = null;
       }
 
       eclipticDegrees = applyZodiacOffsetCounter(eclipticDegrees, this._zodiac);
+
 
       return {
         key,

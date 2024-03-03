@@ -107,9 +107,6 @@ export const POINTS = {
   lilith: {
     label: 'Lilith'
   },
-  selena: {
-    label: 'Selena'
-  },
   fortune: {
     label: 'Fortune part'
   },
