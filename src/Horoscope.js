@@ -490,8 +490,8 @@ export class Horoscope {
         case 'fortune':
           sun = ephemerisResults.find((body) => body.key === 'sun');
           moon = ephemerisResults.find((body) => body.key === 'moon');
-          console.log('sun', sun.position.apparentLongitude);
-          console.log('moon', moon.position.apparentLongitude);
+          console.log('sun', sun.position.apparentLongitude, sun);
+          console.log('moon', moon.position.apparentLongitude, moon);
           console.log('AC', this.Ascendant);
           eclipticDegrees = sun.position.apparentLongitude + moon.position.apparentLongitude - this.Ascendant.ChartPosition.Ecliptic.DecimalDegrees;
           break;
