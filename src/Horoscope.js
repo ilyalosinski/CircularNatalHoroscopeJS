@@ -488,10 +488,11 @@ export class Horoscope {
             .orbit.meanApogee.apparentLongitude;
           break;
         case 'selena':
+          // eslint-disable-next-line no-case-declarations
           const lilithDegrees = ephemerisResults.find((body) => body.key === 'moon')
             .orbit.meanApogee.apparentLongitude;
           eclipticDegrees = (lilithDegrees + 180) % 360;
-          break;  
+          break;
         case 'fortune':
           sun = ephemerisResults.find((body) => body.key === 'sun');
           moon = ephemerisResults.find((body) => body.key === 'moon');
